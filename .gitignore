@@ -7,4 +7,11 @@
 /captures
 # IntelliJ files
 .idea
+/.idea
 *.iml
+/.idea/codeStyleSettings.xml
+/.idea/gradle.xml
+/.idea/misc.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+
