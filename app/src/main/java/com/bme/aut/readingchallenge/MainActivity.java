@@ -13,6 +13,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+// ANYAG:
+// https://github.com/tomoskozi/MVPStart
+// https://github.com/BaloghTamas/SpotifyDemo
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
