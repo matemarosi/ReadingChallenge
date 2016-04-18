@@ -29,6 +29,10 @@
         <activity
             android:name=".ListAllActivity"
             android:label="@string/title_activity_list_all"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListMyActivity"
+            android:label="@string/title_activity_list_my"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
