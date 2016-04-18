@@ -9,4 +9,5 @@
     <string name="title_activity_edit">EditActivity</string>
     <string name="title_activity_list_all">ListAllActivity</string>
     <string name="title_activity_list_my">ListMyActivity</string>
+    <string name="title_activity_browsing">BrowsingActivity</string>
 </resources>

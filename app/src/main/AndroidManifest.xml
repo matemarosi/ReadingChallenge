@@ -33,6 +33,10 @@
         <activity
             android:name=".ListMyActivity"
             android:label="@string/title_activity_list_my"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BrowsingActivity"
+            android:label="@string/title_activity_browsing"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
