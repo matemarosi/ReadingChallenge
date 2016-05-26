@@ -50,7 +50,7 @@ paths:
           required: true
           type: string
       tags:
-        - Estimates
+        - Users
       responses:
         200:
           description: Return with the user's data
@@ -89,7 +89,7 @@ paths:
           type: string
           description: Unique identifier representing a specific product for a given latitude & longitude.
       tags:
-        - Estimates
+        - Books
       responses:
         200:
           description: An array of products
