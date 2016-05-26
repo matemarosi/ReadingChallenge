@@ -1,0 +1,168 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: ReadingChallenge API
+  description: Move your app forward with the ReadingChallenge API
+  version: "1.0.0"
+# the domain of the service
+host: api.readingchallenge.com
+# array of all schemes that your API supports
+schemes:
+  - https
+# will be prefixed to all paths
+basePath: /v1
+produces:
+  - application/json
+paths:
+  /books:
+    get:
+      summary: List of Books
+      description:
+        Blablabla
+      tags:
+        - Books
+      responses:
+        200:
+          description: An array of books
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Book'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /login:
+    post:
+      summary: Logint to ReadingChallenge
+      description:
+        todo
+      parameters:
+        - name: name
+          in: query
+          description: Name
+          required: true
+          type: string
+        - name: password
+          in: query
+          description: Password
+          required: true
+          type: string
+      tags:
+        - Estimates
+      responses:
+        200:
+          description: Return with the user's data
+          schema:
+            type: object
+            items:
+              $ref: '#/definitions/User'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /add:
+    get:
+      summary: Add Book
+      description: todo
+      parameters:
+        - name: start_latitude
+          in: query
+          description: Latitude component of start location.
+          required: true
+          type: number
+          format: double
+        - name: start_longitude
+          in: query
+          description: Longitude component of start location.
+          required: true
+          type: number
+          format: double
+        - name: customer_uuid
+          in: query
+          type: string
+          format: uuid
+          description: Unique customer identifier to be used for experience customization.
+        - name: product_id
+          in: query
+          type: string
+          description: Unique identifier representing a specific product for a given latitude & longitude.
+      tags:
+        - Estimates
+      responses:
+        200:
+          description: An array of products
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Book'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Book:
+    type: object
+    properties:
+      book_id:
+        type: string
+        description: todo
+      title:
+        type: string
+        description: todo
+      author:
+        type: string
+        description: todo
+      image:
+        type: string
+        description: todo
+      pages:
+        type: number
+        description: todo
+      publish_date:
+        type: number
+        description: todo
+      category:
+        type: string
+        description: todo
+  User:
+    type: object
+    properties:
+      user_id:
+        type: string
+        description: todo
+      user_name:
+        type: string
+        description: todo
+      user_password:
+        type: string
+        description: todo
+  Read:
+    type: object
+    properties:
+      read_id:
+        type: string
+        description: todo
+      user_id:
+        type: string
+        description: todo
+      read_date:
+        type: string
+        description: todo
+      stars:
+        type: number
+        description: todo
+      comments:
+        type: string
+        description: todo
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string
