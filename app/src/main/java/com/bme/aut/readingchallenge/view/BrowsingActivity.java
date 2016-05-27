@@ -14,9 +14,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.bme.aut.readingchallenge.R;
+import com.bme.aut.readingchallenge.ReadingChallengeApplication;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 public class BrowsingActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Tracker mTracker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,10 @@ public class BrowsingActivity extends AppCompatActivity
         setContentView(R.layout.activity_browsing);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // Obtain the shared Tracker instance.
+        ReadingChallengeApplication application = (ReadingChallengeApplication) getApplication();
+        mTracker = application.getDefaultTracker();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +51,14 @@ public class BrowsingActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        mTracker.setScreenName("Activity2");
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
     }
 
     @Override

@@ -1,7 +1,7 @@
 package com.bme.aut.readingchallenge.api;
 
-import io.swagger.client.CollectionFormats.*;
-import io.swagger.client.model.InlineResponse200;
+//import com.bme.aut.readingchallenge.CollectionFormats.*;
+import com.bme.aut.readingchallenge.model.InlineResponse200;
 import retrofit2.Call;
 import retrofit2.http.*;
 

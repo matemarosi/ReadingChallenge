@@ -1,6 +1,6 @@
 package com.bme.aut.readingchallenge.api;
 
-import io.swagger.client.CollectionFormats.*;
+//import com.bme.aut.readingchallenge.CollectionFormats.*;
 
 
 import retrofit2.Call;
@@ -8,8 +8,8 @@ import retrofit2.http.*;
 
 import okhttp3.RequestBody;
 
-import io.swagger.client.model.Book;
-import io.swagger.client.model.Error;
+import com.bme.aut.readingchallenge.model.Book;
+import com.bme.aut.readingchallenge.model.Error;
 import java.util.UUID;
 
 import java.util.ArrayList;
