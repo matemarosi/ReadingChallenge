@@ -24,11 +24,11 @@ import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 
 
-import io.swagger.client.auth.HttpBasicAuth;
-import io.swagger.client.auth.ApiKeyAuth;
-import io.swagger.client.auth.OAuth;
-import io.swagger.client.auth.OAuth.AccessTokenListener;
-import io.swagger.client.auth.OAuthFlow;
+import com.bme.aut.readingchallenge.auth.HttpBasicAuth;
+import com.bme.aut.readingchallenge.auth.ApiKeyAuth;
+import com.bme.aut.readingchallenge.auth.OAuth;
+import com.bme.aut.readingchallenge.auth.OAuth.AccessTokenListener;
+import com.bme.aut.readingchallenge.auth.OAuthFlow;
 
 
 public class ApiClient {
@@ -329,7 +329,7 @@ class GsonCustomConverterFactory extends Converter.Factory
             return gsonConverterFactory.responseBodyConverter(type, annotations, retrofit);
     }
 
-    @Override
+//    @Override
     public Converter<?, RequestBody> requestBodyConverter(Type type, Annotation[] annotations, Retrofit retrofit) {
             return gsonConverterFactory.requestBodyConverter(type, annotations, retrofit);
     }

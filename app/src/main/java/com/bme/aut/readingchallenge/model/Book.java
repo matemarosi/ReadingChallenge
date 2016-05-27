@@ -7,9 +7,6 @@ import java.math.BigDecimal;
 
 import com.google.gson.annotations.SerializedName;
 
-
-
-
 @ApiModel(description = "")
 public class Book   {
   
